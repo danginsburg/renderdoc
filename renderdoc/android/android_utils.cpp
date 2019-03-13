@@ -139,9 +139,9 @@ bool IsSupported(std::string deviceID)
 
   int apiVersion = atoi(api.c_str());
 
-  // SDK 23 == Android 6.0, our minimum spec. Only fail if we did parse an SDK string, in case some
+  // SDK 21 == Android 5.0, our minimum spec. Only fail if we did parse an SDK string, in case some
   // Android devices don't support the query - we assume they are new enough.
-  if(apiVersion >= 0 && apiVersion < 23)
+  if(apiVersion >= 0 && apiVersion < 21)
     return false;
 
   return true;
